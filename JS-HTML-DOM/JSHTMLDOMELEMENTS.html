@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+<body>
+    <h1>First Page</h1>
+    <h1 id="demo0">Old Heading</h1>
+    <p id="p1">Hello World</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p class="intro">DOM IS GOOD</p>
+    <p class="intro1">DOMI IS USEFUL</p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4">This is a Text</p>
+    <img id="image" src="1.jpg" width="160" height="120">
+    <script>
+        document.getElementById("demo").innerHTML = "Hello World";     //getelementbyid is method and inner html is property
+        var x = document.getElementsByTagName("p");
+        
+        document.getElementById("demo1").innerHTML = x[0].innerHTML;
+        var y = getElementByClassName("intro");
+        
+        document.getElementById("demo2").innerHTML = y[0].innerHTML;
+        var z = document.querySelectorAll("p.intro1");
+        
+        document.getElementsById("demo3").innerHTML = z[0].innerHTML;
+        var e = document.getElementById("demo0");                      //we can also change the content in the html by this method
+        e.innerHTML = "New Heading";
+        
+        document.getElementById("demo4").innerHTML = "Hello World";    //javascript can also change the content in the html tag
+        
+        document.write(Date());
+        
+        document.getElementById("image").src = "2.jpg";
+    </script>
+</body>
+</html>

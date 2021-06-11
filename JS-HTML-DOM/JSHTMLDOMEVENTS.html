@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="checkCookies()">
+    <h1 onclick="this.innerHTML = 'Ooppss!'">Click Here!</h1>
+    <h1 onclick="changetext(this)">Click Here!</h1>
+    <p>Eneter Your Name: <input type="text" id="fname" onchange="myFunction()"></p>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color: aqua; width: 120px; height: 20px; padding: 40px;">Mouse Over Me!!</div>
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color: aquamarine; width: 120px; height: 20px; padding: 40px;">Click Me!!</div>
+    <button onclick="displayDate()">Click for Time</button>
+    <button id="Btn">Click It!</button>
+    <script>
+        function checkCookies() {
+            var text = "";
+            if (navigator.cookieEnabled == true) {
+                text = "Cookies are enabled.";
+            } 
+            else {
+                text = "Cookies are not enabled.";
+            }
+        document.getElementById("demo").innerHTML = text;
+        }
+
+        function mOver(obj){
+            obj.innerHTML = "Thank You";
+            obj.style.backgroundColor = "red";
+        }
+        function mOut(obj){
+            obj.innerHTML = "Mouse Over Me";
+            obj.style.backgroundColor = "aqua";
+        }
+
+        function mDown(obj){
+            obj.innerHTML = "Release Me!";
+            obj.style.backgroundColor = "red";
+        }
+        function mUp(obj){
+            obj.innerHTML = "Thnak You!!";
+            obj.style.backgroundColor = "yellow";
+        }
+
+        function myFunction(){
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+
+        function changetext(id) {
+            id.innerHTML = 'Ooppss!';
+        }
+
+        function displayDate() {
+            document.getElementById("demo1").innerHTML = Date();
+        }
+
+        document.getElementById("Btn").onclick = displayDate1;
+        function displayDate1() {
+            document.getElementById("demo2").innerHTML = Date();
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+</head>
+<body>
+    <p>Adding multiple events in one button</p>
+    <button id="btn">Try!</button>
+    <p id="demo"></p>
+    <p>This example uses the addEventListener() method on the window object.Try resizing this browser window to trigger the "resize" event handler.</p>
+    <p id="demo1"></p>
+    <p>this is also same example as above but different defining functions terms</p>
+    <p id="demo2"></p>
+    <div id="div1">
+        <p>This div element has an onmousemove event handler that displays a random number every time you move your mouse inside this orange field.</p>
+        <p>Click the button below to remove EventListener</p>
+        <button id="btn2" onclick="removeHandler()">Remove</button>
+    </div>
+    <p id="demo4"></p>
+    <p>This is a example of passing parameter using event addEventListener</p>
+    <button id="btn1">Try!</button>
+    <p id="demo3"></p>
+    <p>This Example shows the date using event EventListener</p>
+    <button id="btn">Try!</button>
+    <p id="demo"></p>
+    <p>This Example is using eventlistener</p>
+    <button id="Btn1">Click</button>
+    <p>This is also a Example of eventlistener</p>
+    <button id="Btn2">Click</button>
+    <p>This is a example of a multiple eventlistener</p>
+    <button id="Btn3">Click</button>
+    <script>
+        var x = document.getElementById("btn");
+        x.addEventListener("mouseover", firstFunction);
+        x.addEventListener("click", secondFunction);
+        x.addEventListener("mouseout", thirdFunction);
+        function firstFunction(){
+            document.getElementById("demo").innerHTML += "Moused over!<br>";
+        }
+        function secondFunction(){
+            document.getElementById("demo").innerHTML += "clicked!<br>";
+        }
+        function thirdFunction(){
+            document.getElementById("demo").innerHTML += "Moused out!<br>";
+        }
+
+        indow.addEventListener("resize", resize1);
+        function resize1(){
+            document.getElementById("demo1").innerHTML = Math.random();
+        }
+
+        window.addEventListener("resize", function(){document.getElementById("demo2").innerHTML = Math.random()});     //this is the same method as above but with different definig function terms
+ 
+        var p1 = 5;
+        var p2 = 7;
+        document.getElementById("btn1").addEventListener("click", function(){myFuntion(p1,p2);});
+        function myFuntion(a,b){
+            var result = a*b;
+            document.getElementById("demo3").innerHTML = result;
+        }
+
+        document.getElementById("div1").addEventListener("mousemove", function1);
+        function function1(){
+            document.getElementById("demo4").innerHTML = Math.random();
+        }
+        function removeHandler(){
+            document.getElementById("div1").removeEventListener("mousemove", function1);
+        }
+
+
+        document.getElementById("btn").addEventListener("click", displayDate);
+        function displayDate(){
+            document.getElementById("demo").innerHTML = Date();
+        }
+        document.getElementById("Btn1").addEventListener("click", function () { alert("Hello World") });
+
+        document.getElementById("Btn2").addEventListener("click", alert1);
+        function alert1() {
+            alert("Hello World Again")
+        };
+
+        var x = document.getElementById("Btn3");
+        x.addEventListener("click", firstFunction);
+        x.addEventListener("click", secondFunction);
+        function firstFunction() {
+            alert("First Eventlistener");
+        }
+        function secondFunction() {
+            alert("Second Eventlistener");
+        }
+    </script>
+</body>
+</html>

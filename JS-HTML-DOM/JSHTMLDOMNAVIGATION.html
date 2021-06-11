@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo">My First Page</h1>
+    <p id="demo1"></p>
+    <h1 id="demo2">My Second Page</h1>
+    <p id="demo3"></p>
+    <h1 id="demo4">My Third Page</h1>
+    <p id="demo5"></p>
+    <h1 id="demo6">My Fourth Page</h1>
+    <p id="demo7"></p>
+    <h1 id="demo8">My Fifth Page</h1>
+    <p id="demo9"></p>
+    <p>DOM is ver useful!</p>
+    <p>The  first alert example demonstrates the <b>document.body</b> property.</p>
+    <p>The second alert example demonstrates the <b>document.documentElement</b> property.</p>
+    <script>
+        document.getElementById("demo1").innerHTML = document.getElementById("demo").innerHTML;
+
+        document.getElementById("demo3").innerHTML = document.getElementById("demo2").firstChild.nodeValue;
+
+        document.getElementById("demo5").innerHTML = document.getElementById("demo4").childNodes[0].nodeValue;
+
+        alert(document.body.innerHTML);                                                //this gives only content in the body tag
+  
+        alert(document.documentElement.innerHTML);                                     //this gives the whole content of the document file
+
+        document.getElementById("demo7").innerHTML = document.getElementById("demo6").nodeName;
+
+        document.getElementById("demo9").innerHTML = document.getElementById("demo8").nodeType;
+    </script>
+</body>
+</html>
