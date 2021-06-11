@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Javascript can display data in different ways</h1>
+    <p id="demo"></p>
+    <button onclick="window.print()">Print This Page</button><br>
+    
+    <script>
+        document.getElementById('demo').innerHTML = 5 + 9;
+        
+        document.write(6 + 9);                      //usually we use document.write in testing purposes
+
+        window.alert(4 + 14);
+
+        alert(4 + 14);                             //specifying the window keyword is optional
+
+        console.log(5 + 3);                        //usually we use console.log for debugging purposes
+
+        
+    </script>
+</body>
+</html>

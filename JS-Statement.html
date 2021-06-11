@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Javascript Statements Can Be Written In Different Ways</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        var a,b,c;                                        //We can declare as many variable as we want in a single line seperated by comma and can define them later in the code
+        a = 6;
+        b = 9;                                            //semicolon are used to seperate javascript statements
+        c = a + b;
+        document.getElementById("demo").innerHTML = c;
+
+        var d,e,f;
+        d = 4; e = 6 ; f = d + e;                          //we can also give multiple statements in one line seperated by semicolon
+        document.getElementById("demo1").innerHTML = f;
+
+        document.getElementById("demo2").innerHTML =       //if a statement does not fit in one line we can break the code after an operator or a comma
+        "Hello World!";
+        
+    </script>
+</body>
+</html>
