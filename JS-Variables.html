@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Javascript Variables</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <script>
+        var x = 5;                                            //using var we have created a variable named x and store a value 5 in it
+        var y = 4;                                            //using var we have created a variable named y and store a value 4 in it
+        var z = x + y;                                        //in javascript we can also variable in the computation
+        document.getElementById("demo").innerHTML = z;
+
+        var a = 8.567;                                        //we have written number without single or double comma because if we write the number in the comma it will become string
+        var name = "John Walker";                             //we can write string in double comma and single comma as well
+        var resp = 'Yes';
+        document.getElementById("demo1").innerHTML = a +"<br>"+ name +"<br>"+ resp; 
+        
+        var name1 = "John Walker", carName1 = "Volvo", price1 = 50000;                //we can also declare more than one variable in one line
+        document.getElementById("demo2").innerHTML = name1 +"<br>"+ carName1 +"<br>"+ price1;
+
+        var carName2;
+        document.getElementById("demo3").innerHTML = carName2;            //if we do not declare variable it will give undefined 
+        carName2 = "BMW";
+        document.getElementById("demo4").innerHTML = carName2;            //we can also declare variable later on 
+    </script>
+</body>
+</html>
